@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-size: 16px;
+  font-weight: 400px;
+  color: #777;
+  padding: 30px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(155, 89, 182, 0.7), rgba(142, 68, 173, 0.76)), url(../img/bg.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative; }
+  .header__text-box {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+
+.main-heading {
+  color: white;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 50px; }
+  .main-heading--main {
+    display: block;
+    font-size: 60px;
+    letter-spacing: 20px;
+    animation: moveInLeft 2s ease-out; }
+  .main-heading--sub {
+    display: block;
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 7.8px;
+    animation: moveInRight 2s ease-out; }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0px); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0px); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
+
+.btn:visited,
+.btn:link {
+  display: inline-block;
+  padding: 15px 45px;
+  border-radius: 100px;
+  transition: all .3s;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative; }
+
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(43, 43, 43, 0.397); }
+
+.btn:active {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(43, 43, 43, 0.397); }
+
+.btn--white {
+  background-color: white;
+  color: #777; }
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s; }
+
+.btn--white::after {
+  background-color: white; }
+
+.btn:hover::after {
+  transform: scale(1.5);
+  opacity: 0; }
+
+.btn--animated {
+  animation: moveInBottom .4s ease-out .8s;
+  animation-fill-mode: backwards; }
