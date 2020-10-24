@@ -20,12 +20,30 @@
 
 .section-tours {
     background-color: $light-grey;
-    padding:25rem 0;
+    padding:25rem 0 20rem;
     margin-top: -10rem;
 }
 
 .section-stories {
-    padding:25rem 0;
+    padding:20rem 0;
     position:relative;
+}
 
+.section-booking {
+    padding: 20rem 0;
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba($light-purple, 0.7), 
+        rgba($dark-purple, 0.76)), 
+        url(../img/bg.jpg);
+}
+
+.book {
+    background-image: linear-gradient(100deg, rgba($white, .8) 0%, rgba($white, .8) 50%, transparent 50%), url(../img/landscape-tours.jpg);
+    background-size: cover;
+    height: fit-content;
+    &__form {
+        width:50%;
+        padding:5rem;
+    }
 }

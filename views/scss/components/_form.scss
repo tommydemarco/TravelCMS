@@ -1,0 +1,44 @@
+.form {
+    &__input {
+        padding: 1.5rem 2rem;
+        border-radius: 2px;
+        background-color: rgba($white, .5);
+        font-family:inherit;
+        border:none; 
+        transition: all .1s;
+        border-bottom: 3px solid transparent;
+        width:90%;
+        z-index:1;
+        display:block;
+        &:focus {
+            outline: none;
+            box-shadow: $shadow;
+            border-bottom: 3px solid $dark-purple;
+            &:invalid {
+                border-bottom: 3px solid $dark-purple;  
+            }
+            &:valid {
+                border-bottom: 3px solid $dark-purple;  
+            }
+        }
+    }
+    &__group {
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
+    &__label {
+        font-size: 1.2rem;
+        font-weight:600;
+        margin-left:2rem;
+        margin-top:.7rem;
+        display:block;
+        transition: all .3s;
+        z-index:0;
+    }
+    &__input:placeholder-shown + &__label {
+        opacity:0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }  
+}
