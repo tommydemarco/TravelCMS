@@ -20,6 +20,10 @@
     background-color: $white;
     color: $dark-grey;
 }
+.btn--purple {
+    background-image: linear-gradient(to right, $light-purple, $dark-purple);
+    color: $white;
+}
 .btn::after {
     content: "";
     display:inline-block;
@@ -34,6 +38,9 @@
 }
 .btn--white::after {
     background-color: white;
+}
+.btn--purple::after {
+    background-image: linear-gradient(to right, $light-purple, $dark-purple);;
 }
 .btn:hover::after {
     transform: scale(1.5);
