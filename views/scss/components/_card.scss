@@ -1,0 +1,126 @@
+.card {
+    perspective: 100rem;
+    -moz-perspective: 100rem;
+    position:relative;
+    height:51rem; 
+
+    &__side {
+        transition: all .8s ease-out;
+        height:51rem;
+        position:absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        overflow:hidden;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        box-shadow: $shadow;
+
+        &--front {
+            
+        }
+        &--back {
+            transform: rotateY(-180deg);
+            &-1 {
+                background-image: linear-gradient(to right bottom, lighten($box1-1, 20%), $box1-2);
+            }
+            &-2 {
+                background-image: linear-gradient(to right bottom, lighten($box2-1, 20%), $box2-2);
+            }
+            &-3 {
+                background-image: linear-gradient(to right bottom, lighten($box3-1, 20%), $box3-2);
+            }
+        }
+
+    }
+
+    &:hover &__side--front {
+        transform: rotateY(180deg);
+    }
+    &:hover &__side--back {
+        transform: rotateY(0); 
+    }
+
+    &__picture {
+        background-size: cover;
+        height: 23rem; 
+        background-blend-mode: screen; 
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        &--1 {
+            background-image: linear-gradient(to right bottom, lighten($box1-1, 20%), $box1-2),
+            url(../img/landscape-portrait-sea.jpg);
+        }
+        &--2 {
+            background-image: linear-gradient(to right bottom, lighten($box2-1, 20%), $box2-2),
+            url(../img/landscape-sea-tower.jpg);
+        }
+        &--3 {
+            background-image: linear-gradient(to right bottom, lighten($box3-1, 20%), $box3-2),
+            url(../img/landscape-sunset.jpg);
+        }
+    }
+    &__heading {
+    text-transform: uppercase; 
+    font-weight: 300;
+    font-size: 2.5rem;
+    text-align: right;
+    position: absolute;
+    top:16rem;
+    right:4rem;
+    width: 75%;
+    }
+
+    &__heading-span {
+        padding: 1rem 1.3rem;
+        color:white;
+        -webkit-box-decoration-break: clone;
+        &--1 {
+            background-image: linear-gradient(to right bottom, lighten(rgba($box1-1, .7), 20%), rgba($box1-2, .7));
+        }
+        &--2 {
+            background-image: linear-gradient(to right bottom, lighten(rgba($box2-1, .7), 20%), rgba($box2-2, .7));
+        }
+        &--3 {
+            background-image: linear-gradient(to right bottom, lighten(rgba($box3-1, .7), 20%), rgba($box3-2, .7));
+        }
+    }
+
+    &__details {
+        padding:3rem;
+        ul {
+            list-style:none;
+            width:80%;
+            margin: 0 auto;
+            li {
+                text-align: center;
+                padding: 1rem;
+                &:not(:last-child) {
+                    margin-bottom: 1px solid $dark-grey;
+                }
+            }
+        }
+    }
+
+    //BACK SIDE OF THE CARD
+    &__callta {
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+    }
+    &__price-box {
+        text-align: center;
+        color: $white;
+        margin-bottom: 8rem;
+    }
+    &__price-only {
+        text-transform: uppercase;
+    }
+    &__price-value {
+        font-size: 6rem;
+        font-weight: 100;
+    }
+}

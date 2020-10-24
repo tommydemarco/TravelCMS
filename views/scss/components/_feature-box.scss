@@ -4,9 +4,14 @@
     padding:2.5rem;
     border-radius: .5rem;
     box-shadow: 0 2rem 4rem rgba($black, .4);
+    transition: all .3s ease-out;
+    &:hover {
+        transform: translateY(-5px);  
+    }
     &__icon {
         font-size: 6rem!important;
         margin-bottom: 1rem;
+        display:inline-block;
         background-image: linear-gradient(to right, $light-purple, $dark-purple);
         -webkit-background-clip: text;
         color:transparent;

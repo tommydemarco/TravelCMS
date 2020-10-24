@@ -80,7 +80,16 @@ body {
 .section-features {
   padding: 20rem 0;
   background-image: linear-gradient(to right bottom, rgba(155, 89, 182, 0.7), rgba(142, 68, 173, 0.76)), url(../img/bg.jpg);
-  background-size: cover; }
+  background-size: cover;
+  margin-top: -10rem;
+  transform: skewY(-6deg); }
+  .section-features > * {
+    transform: skewY(6deg); }
+
+.section-tours {
+  background-color: #eeeded;
+  padding: 25rem 0;
+  margin-top: -10rem; }
 
 .btn:visited,
 .btn:link {
@@ -160,15 +169,106 @@ body {
       z-index: 20;
       transform: scale(1.2); }
 
+.card {
+  perspective: 100rem;
+  -moz-perspective: 100rem;
+  position: relative;
+  height: 51rem; }
+  .card__side {
+    transition: all .8s ease-out;
+    height: 51rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3); }
+    .card__side--back {
+      transform: rotateY(-180deg); }
+      .card__side--back-1 {
+        background-image: linear-gradient(to right bottom, #55e7ca, #16a085); }
+      .card__side--back-2 {
+        background-image: linear-gradient(to right bottom, #7ee2a8, #27ae60); }
+      .card__side--back-3 {
+        background-image: linear-gradient(to right bottom, #8bc4ea, #2980b9); }
+  .card:hover .card__side--front {
+    transform: rotateY(180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0); }
+  .card__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    .card__picture--1 {
+      background-image: linear-gradient(to right bottom, #55e7ca, #16a085), url(../img/landscape-portrait-sea.jpg); }
+    .card__picture--2 {
+      background-image: linear-gradient(to right bottom, #7ee2a8, #27ae60), url(../img/landscape-sea-tower.jpg); }
+    .card__picture--3 {
+      background-image: linear-gradient(to right bottom, #8bc4ea, #2980b9), url(../img/landscape-sunset.jpg); }
+  .card__heading {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 2.5rem;
+    text-align: right;
+    position: absolute;
+    top: 16rem;
+    right: 4rem;
+    width: 75%; }
+  .card__heading-span {
+    padding: 1rem 1.3rem;
+    color: white;
+    -webkit-box-decoration-break: clone; }
+    .card__heading-span--1 {
+      background-image: linear-gradient(to right bottom, rgba(85, 231, 202, 0.7), rgba(22, 160, 133, 0.7)); }
+    .card__heading-span--2 {
+      background-image: linear-gradient(to right bottom, rgba(126, 226, 168, 0.7), rgba(39, 174, 96, 0.7)); }
+    .card__heading-span--3 {
+      background-image: linear-gradient(to right bottom, rgba(139, 196, 234, 0.7), rgba(41, 128, 185, 0.7)); }
+  .card__details {
+    padding: 3rem; }
+    .card__details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      .card__details ul li {
+        text-align: center;
+        padding: 1rem; }
+        .card__details ul li:not(:last-child) {
+          margin-bottom: 1px solid #777; }
+  .card__callta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center; }
+  .card__price-box {
+    text-align: center;
+    color: white;
+    margin-bottom: 8rem; }
+  .card__price-only {
+    text-transform: uppercase; }
+  .card__price-value {
+    font-size: 6rem;
+    font-weight: 100; }
+
 .feature-box {
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
   padding: 2.5rem;
   border-radius: .5rem;
-  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4); }
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4);
+  transition: all .3s ease-out; }
+  .feature-box:hover {
+    transform: translateY(-5px); }
   .feature-box__icon {
     font-size: 6rem !important;
     margin-bottom: 1rem;
+    display: inline-block;
     background-image: linear-gradient(to right, #9b59b6, #8e44ad);
     -webkit-background-clip: text;
     color: transparent; }
