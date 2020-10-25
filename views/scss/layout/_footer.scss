@@ -1,0 +1,50 @@
+.footer {
+    background-color: $black;
+    padding: 10rem 0;
+    &__logo-box {
+        width:fit-content;   
+        margin: 0 auto;
+    }   
+    &__logo {
+        font-size:10rem!important;
+        background-image: linear-gradient(to right, $light-purple, $dark-purple);
+        -webkit-background-clip: text;
+        color:transparent;  
+    }
+    &__navigation {
+        border-top: 1px solid $light-grey;
+        width:fit-content;
+        padding-top: 1rem;
+    }
+    &__list {
+        list-style: none;
+    }
+    &__item {
+        display:inline-block;
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+    }   
+    &__link {   
+        &:link,
+        &:visited {
+            color: $light-purple;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: all .3s;
+        }
+        &:hover,
+        &:active {
+            color: lighten($light-purple, 30%);
+            box-shadow: $shadow;
+            transform: rotate(5deg) scale(1.2);
+        }
+    }
+    &__text {
+        color:$light-purple;
+        width: 80%;
+        float:right;
+        border-top: 1px solid $light-grey;
+        padding-top: 1rem;
+    }
+}

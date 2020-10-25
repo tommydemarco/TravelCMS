@@ -44,19 +44,19 @@
     &__picture {
         background-size: cover;
         height: 23rem; 
-        background-blend-mode: screen; 
+        background-blend-mode: screen;
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         &--1 {
-            background-image: linear-gradient(to right bottom, lighten($box1-1, 20%), $box1-2),
+            background-image: linear-gradient(to right bottom, darken(lighten($box1-1, 20%), 20%), darken($box1-2, 20%)),
             url(../img/landscape-portrait-sea.jpg);
         }
         &--2 {
-            background-image: linear-gradient(to right bottom, lighten($box2-1, 20%), $box2-2),
+            background-image: linear-gradient(to right bottom, darken(lighten($box2-1, 20%), 20%), darken($box2-2, 20%)),
             url(../img/landscape-sea-tower.jpg);
         }
         &--3 {
-            background-image: linear-gradient(to right bottom, lighten($box3-1, 20%), $box3-2),
+            background-image: linear-gradient(to right bottom, $box3-1, darken($box3-2, 20%)),
             url(../img/landscape-sunset.jpg);
         }
     }
