@@ -9,7 +9,7 @@
         outline-offset: 1.5rem;
         &--p1 {
            left:0;
-           top: -2rem; 
+           top: -1rem; 
         }
         &--p2 {
             right:0;
@@ -23,10 +23,10 @@
              transform: (.9);
          }
          &:hover {
-            outline: 1.5rem solid $dark-purple;
+            outline: 1rem solid $dark-purple;
             box-shadow: 0 2rem 5rem rgba($black, .5);
             z-index: 20;
-            transform: scale(1.2);
+            transform: scale(1.1);
          }
     }
 }

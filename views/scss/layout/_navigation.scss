@@ -16,12 +16,12 @@
 
     }   
     &__background {
-       height: 6rem;
-       width:6rem;
+       height: 3.5rem;
+       width:3.5rem;
        border-radius: 50%;
        position: fixed;
-       top: 6.5rem;
-       right:6.5rem;
+       top: 7rem;
+       right:7rem;
        background-image: radial-gradient($light-purple, $dark-purple);
        z-index: 1000;
        transition: all 1s ease-out;
@@ -72,7 +72,7 @@
         
     }
     &__checkbox:checked ~ &__background {
-        transform: scale(80);
+        transform: scale(130);
     }
     &__checkbox:checked ~ &__nav {
         opacity:1;
