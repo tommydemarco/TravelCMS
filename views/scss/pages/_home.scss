@@ -25,17 +25,23 @@
 }
 
 .section-stories {
-    padding:20rem 0;
+    padding:10rem 0;
     position:relative;
-}
-
-.section-booking {
-    padding: 20rem 0;
     background-image: linear-gradient(
         to right bottom, 
         rgba($light-purple, 0.7), 
         rgba($dark-purple, 0.76)), 
-        url(../img/bg.jpg);
+        url(../img/testimonials-background.jpg);
+    background-size: cover;
+}
+
+.section-booking {
+    padding: 10rem 0 15rem;
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba($light-purple, 0.7), 
+        rgba($dark-purple, 0.76)), 
+        url(../img/bg.jpg);   
 }
 
 .book {

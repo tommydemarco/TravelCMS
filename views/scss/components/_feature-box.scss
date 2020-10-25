@@ -18,5 +18,26 @@
     }
     &__text {
         font-size:inherit;
-    }  
+    } 
+    &__job {
+        color: lighten(#333, 40%);
+        margin-bottom: 1.5rem;
+        font-size:1.7rem;
+    } 
+    &__image {
+        border-radius: 50%;
+        max-width: 12rem;
+        max-height:12rem;
+        width:50%;
+        transform: scale(1);
+        margin: 0 auto 2rem auto;
+        overflow:hidden;
+        &-img {
+            width:100%;
+            transition: all .3s;
+        }
+    }
+    &:hover &__image-img {
+        transform: scale(1.3);
+    }
 }

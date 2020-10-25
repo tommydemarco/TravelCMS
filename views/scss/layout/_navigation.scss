@@ -3,11 +3,11 @@
         display:none;
     }
     &__button {
-        height:7rem;
-        width:7rem;
+        height:6rem;
+        width:6rem;
         position:fixed;
-        top:6rem;
-        right:6rem;
+        top:5rem;
+        right:5rem;
         border-radius: 50%;
         z-index:2000;
         background-color: white;
@@ -16,12 +16,12 @@
 
     }   
     &__background {
-       height: 3.5rem;
-       width:3.5rem;
+       height: 5rem;
+       width:5rem;
        border-radius: 50%;
        position: fixed;
-       top: 7rem;
-       right:7rem;
+       top: 5.5rem;
+       right:5.5rem;
        background-image: radial-gradient($light-purple, $dark-purple);
        z-index: 1000;
        transition: all 1s ease-out;
@@ -72,7 +72,7 @@
         
     }
     &__checkbox:checked ~ &__background {
-        transform: scale(130);
+        transform: scale(100);
     }
     &__checkbox:checked ~ &__nav {
         opacity:1;
@@ -82,7 +82,7 @@
     //MENU ICON
     &__icon {
         position:relative;
-        margin-top:3.5rem;
+        margin-top:3rem;
         &,
         &::after,
         &::before {

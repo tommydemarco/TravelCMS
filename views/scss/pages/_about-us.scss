@@ -1,0 +1,13 @@
+.section-about-us {
+    background-color: $light-grey;
+    padding:10rem 0 15rem;   
+}
+.section-team {
+    padding: 10rem 0 15rem;
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba($light-purple, 0.7), 
+        rgba($dark-purple, 0.76)), 
+        url(../img/bg.jpg);
+    background-size: cover;
+} 
