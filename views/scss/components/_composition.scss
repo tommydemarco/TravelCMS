@@ -19,6 +19,15 @@
             left:20%;
             top: 15rem;   
          }
+         //ABOUT PAGE 
+         &--p4 {
+            left:0;
+            top: 0;   
+         }
+         &--p5 {
+            right:0;
+            top: 8rem;   
+         }
          &:not(:hover) {
              transform: (.9);
          }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="views/css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Frontend</title>
 </head>
@@ -25,37 +25,6 @@
         </nav>
     </div>
 
-    <main>
-
-        <section class="section-booking">
-            <div class="row">
-                <div class="book">
-                    <div class="book__form">
-                        <form action="#" class="form">
-                            <div class="u-mb-mid">
-                                <h2 class="heading-secondary">
-                                    Contact us now!
-                                </h2>
-                            </div>
-                            <div class="form__group">
-                                <input type="text" class="form__input" id="name" required placeholder="Your full name">
-                                <label class="form__label" for="name">Your full name</label>
-                            </div>
-                            <div class="form__group">
-                                <input type="email" class="form__input" id="email" required placeholder="Your email">
-                                <label class="form__label" for="email">Your email</label>
-                            </div>
-                            <div class="form__group">
-                                <textarea type="text" class="form__input" id="message" required placeholder="Your message"></textarea>
-                                <label class="form__label" for="message">Your message</label>
-                            </div>
-                            <a href="#" class="btn btn--purple">Send message</a>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
 
     <footer class="footer">
         <div class="footer__logo-box u-mb-mid">

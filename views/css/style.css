@@ -121,7 +121,7 @@ body {
 
 .section-team {
   padding: 10rem 0 15rem;
-  background-image: linear-gradient(to right bottom, rgba(183, 124, 206, 0.7), rgba(142, 68, 173, 0.76)), url(../img/bg.jpg);
+  background-image: linear-gradient(to right bottom, rgba(183, 124, 206, 0.7), rgba(142, 68, 173, 0.76)), url(../img/landscape-sunset.jpg);
   background-size: cover; }
 
 .btn:visited,
@@ -194,6 +194,12 @@ body {
     .composition__img--p3 {
       left: 20%;
       top: 15rem; }
+    .composition__img--p4 {
+      left: 0;
+      top: 0; }
+    .composition__img--p5 {
+      right: 0;
+      top: 8rem; }
     .composition__img:not(:hover) {
       transform: 0.9; }
     .composition__img:hover {
@@ -431,7 +437,8 @@ body {
   z-index: 2000;
   background-color: white;
   text-align: center;
-  cursor: pointer; }
+  cursor: pointer;
+  box-shadow: 0 2rem 4rem rgba(44, 62, 80, 0.3); }
 
 .navigation__background {
   height: 5rem;
@@ -490,7 +497,7 @@ body {
 
 .navigation__icon {
   position: relative;
-  margin-top: 3rem; }
+  margin-top: 2.9rem; }
   .navigation__icon, .navigation__icon::after, .navigation__icon::before {
     height: 3px;
     width: 3rem;
