@@ -1,3 +1,13 @@
+<?php
+
+//retreiving the generic info from the db
+require_once 'controllers/testimonials.controller.php';
+require_once 'models/testimonials.model.php';
+
+$testimonials = TestimonialsController::ctlShowTestimonials();
+
+?>
+
 <main>
     <section class="section-stories">
 
@@ -7,33 +17,24 @@
             </h2>
         </header>
 
+        <?php foreach($testimonials as $testimonial): ?>
+
         <div class="row">
             <div class="story">
                 <figure class="story__shape">
-                    <img src="./img/kerl.png" alt="" class="story__image">
-                    <figcaption class="story__caption">John Doe</figcaption>
+                    <img src="<?php echo $testimonial['picture'] ?>" alt="" class="story__image">
+                    <figcaption class="story__caption"><?php echo $testimonial['name'] ?></figcaption>
                 </figure>
                 <div class="story__text">
-                    <h3 class="heading-tertiary u-mb-small">The tour was just wonderful</h3>
+                    <h3 class="heading-tertiary u-mb-small"><?php echo $testimonial['title'] ?></h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum eligendi sequi mollitia vel sit ad, illum reprehenderit ut quaerat nisi distinctio eos quae accusantium ratione soluta hic nulla enim explicabo.
+                    <?php echo $testimonial['review'] ?>
                     </p>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="story">
-                <figure class="story__shape">
-                    <img src="./img/kerl.png" alt="" class="story__image">
-                    <figcaption class="story__caption">John Doe</figcaption>
-                </figure>
-                <div class="story__text">
-                    <h3 class="heading-tertiary u-mb-small">The tour was just wonderful</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum eligendi sequi mollitia vel sit ad, illum reprehenderit ut quaerat nisi distinctio eos quae accusantium ratione soluta hic nulla enim explicabo.
-                    </p>
-                </div>
-            </div>
-        </div>
+
+        <?php endforeach; ?>
+
     </section>
 </main>

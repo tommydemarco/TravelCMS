@@ -31,9 +31,9 @@
             </div>
             <div class="col-1-of-2">
                 <div class="composition">
-                    <img src="./img/landscape-portrait-sea.jpg" alt="" class="composition__img composition__img--p1">
-                    <img src="./img/landscape-sea-tower.jpg" alt="" class="composition__img composition__img--p2">
-                    <img src="./img/landscape-sunset.jpg" alt="" class="composition__img composition__img--p3">
+                    <img src="./views/img/landscape-portrait-sea.jpg" alt="" class="composition__img composition__img--p1">
+                    <img src="./views/img/landscape-sea-tower.jpg" alt="" class="composition__img composition__img--p2">
+                    <img src="./views/img/landscape-sunset.jpg" alt="" class="composition__img composition__img--p3">
                 </div>
             </div>
         </div>

@@ -1,55 +1,60 @@
+<?php
+
+$generic = GenericInfoController::ctlShowGenericInfo();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="<?php echo $generic["description"] ?>">
+    <?php 
+        // $keywords = json_decode($generic["keywords"], true);
+        // $k_w = '';
+        // foreach($keywords as $keyword) {
+        //     $k_w .= "$keyword, ";
+        // }
+        // $k_w = substr($k_w, 0, -2)
+    ?>
+    <meta name="keywords" content="<?php echo "Keywords here" ?>">
+
+
+    <!-- FAVICONS -->
+    <link rel="apple-touch-icon" sizes="144x144" href="./views/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./views/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./views/favicons/favicon-16x16.png">
+    <link rel="manifest" href="./views/favicons/site.webmanifest">
+    <link rel="mask-icon" href="./views/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
     <link rel="stylesheet" href="views/css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Frontend</title>
+    <title><?php echo $generic["title"] ?></title>
 </head>
 <body>
 
-    <div class="navigation">
-        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
-        <label for="navi-toggle" class="navigation__button">
-            <span class="navigation__icon">&nbsp;</span>
-        </label>
-        <div class="navigation__background"></div>
-        <nav class="navigation__nav">
-            <ul class="navigation__list">
-                <li class="navigation__item"><a href="index.html" class="navigation__link">Home</a></li>
-                <li class="navigation__item"><a href="about.html" class="navigation__link">About us</a></li>
-                <li class="navigation__item"><a href="testimonials.html" class="navigation__link">Testimonials</a></li>
-                <li class="navigation__item"><a href="contacts.html" class="navigation__link">Contacts</a></li>
-            </ul>
-        </nav>
-    </div>
+    <?php include_once 'elements/navigation.php' ?>
 
+    <?php 
 
-    <footer class="footer">
-        <div class="footer__logo-box u-mb-mid">
-            <i class="fa fa-cubes footer__logo" aria-hidden="true"></i>
-        </div>
-        <div class="row">
-            <div class="col-1-of-2">
-                <nav class="footer__navigation">
-                    <ul class="footer__list">
-                        <li class="footer__item"><a href="#" class="footer__link">Contacts</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">Contacts</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">Contacts</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">Contacts</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="col-1-of-2">
-                <p class="footer__text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, cumque quia temporibus, beatae nulla, quam rem repellat porro et animi reiciendis! Eaque maiores quibusdam esse autem, praesentium quis doloremque nobis.
-                </p>
-            </div>
-        </div>
+    $availableRoutes = ['home' => 'index', 'about' => 'about', 'contacts' => 'contacts', 'testimonials' => 'testimonials'];
 
-    </footer>
+    if(isset($_GET["page"])){
+        $url_request = $_GET["page"];
+        if(isset($availableRoutes[$url_request])) {
+            include "pages/" . $availableRoutes[$url_request] . ".php";
+        } else {
+            include 'pages/404.php';
+        }
+    } else {
+        include 'pages/index.php';
+    }
+    ?>
 
+    <?php include_once 'elements/footer.php' ?>
     
 </body>
 </html>
