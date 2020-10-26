@@ -1,26 +1,43 @@
+<?php
+
+//retreiving the generic info from the db
+require_once 'controllers/about.controller.php';
+require_once 'models/about.model.php';
+
+$about_info = AboutController::ctlShowAboutInfo();
+$employee_info = AboutController::ctlShowEmployeesInfo();
+
+//deconding the paragraphs
+$paragraphs = json_decode($about_info['paragraphs'], true);
+$pictures = json_decode($about_info['pictures'], true);
+
+?>
+
 <main>
     <section class="section-about-us">
         <div class="u-center-text u-mb-big">
             <h1 class="heading-secondary">
-                Our company, at your service
+                <?php echo $about_info['title'] ?>
             </h1>
         </div>
         <div class="row">
             <div class="col-1-of-2">
-                <h3 class="heading-tertiary u-mb-small">You are going to fall for these views</h3>
+
+                <?php foreach($paragraphs as $paragraph): ?>
+                    
+                <h3 class="heading-tertiary u-mb-small"><?php echo $paragraph['title']; ?></h3>
                 <p class="paragraph">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab unde rem molestiae libero quas dignissimos nesciunt corporis magni.
+                    <?php echo $paragraph['content'] ?>
                 </p>
-                <h3 class="heading-tertiary u-mb-small">Live the adventure of your life</h3>
-                <p class="paragraph">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab unde rem molestiae libero quas dignissimos nesciunt corporis magni obcaecati quo, architecto quis.
-                </p>
+
+                <?php endforeach; ?>
+
                 <a class="btn btn--purple u-mt-small" href="#">Discover more</a>
             </div>
             <div class="col-1-of-2">
                 <div class="composition">
-                    <img src="./img/landscape-portrait-sea.jpg" alt="" class="composition__img composition__img--p4">
-                    <img src="./img/landscape-sea-tower.jpg" alt="" class="composition__img composition__img--p5">
+                        <img src="<?php echo $pictures[0]; ?>" alt="" class="composition__img composition__img--p4">
+                        <img src="<?php echo $pictures[1] ?>" alt="" class="composition__img composition__img--p5">
                 </div>
             </div>
         </div>
@@ -34,42 +51,24 @@
         </div>
 
         <div class="row">
+
+            <?php foreach($employee_info as $employee): ?>
+
             <div class="col-1-of-3">
                 <div class="feature-box">
                     <div class="feature-box__image">
-                        <img src="./img/kerl.png" alt="" class="feature-box__image-img">
+                        <img src="<?php echo $employee['picture']; ?>" alt="" class="feature-box__image-img">
                     </div>
-                    <h3 class="heading-tertiary">Explore the world</h3>
-                    <h5 class="feature-box__job">CEO and DFO</h5>
+                    <h3 class="heading-tertiary"><?php echo $employee['name']; ?></h3>
+                    <h5 class="feature-box__job"><?php echo $employee['role']; ?></h5>
                     <p class="feature-box__text">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, qui ullam. Sequi consequatur officiis ipsam voluptatem? Recusandae, laborum cupiditate ipsam delectus error libero, a eligendi quos molestias odio dicta nemo.
+                        <?php echo $employee['description']; ?>
                     </p>
                 </div>
             </div>
-            <div class="col-1-of-3">
-                <div class="feature-box">
-                    <div class="feature-box__image">
-                        <img src="./img/kerl.png" alt="" class="feature-box__image-img">
-                    </div>
-                    <h3 class="heading-tertiary">Explore the world</h3>
-                    <h5 class="feature-box__job">CEO and DFO</h5>
-                    <p class="feature-box__text">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, qui ullam. Sequi consequatur officiis ipsam voluptatem? Recusandae, laborum cupiditate ipsam delectus error libero, a eligendi quos molestias odio dicta nemo.
-                    </p>
-                </div>
-            </div>
-            <div class="col-1-of-3">
-                <div class="feature-box">
-                    <div class="feature-box__image">
-                        <img src="./img/kerl.png" alt="" class="feature-box__image-img">
-                    </div>
-                    <h3 class="heading-tertiary">Explore the world</h3>
-                    <h5 class="feature-box__job">CEO and DFO</h5>
-                    <p class="feature-box__text">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, qui ullam. Sequi consequatur officiis ipsam voluptatem? Recusandae, laborum cupiditate ipsam delectus error libero, a eligendi quos molestias odio dicta nemo.
-                    </p>
-                </div>
-            </div>
+
+            <?php endforeach; ?> 
+
         </div>
     </section>
 </main>

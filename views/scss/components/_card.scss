@@ -12,6 +12,7 @@
         left:0;
         width: 100%;
         overflow:hidden;
+        -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         border-radius: 3px;
         box-shadow: $shadow;

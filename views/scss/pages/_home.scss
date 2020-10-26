@@ -60,5 +60,18 @@
     &__form {
         width:50%;
         padding:5rem;
+        @include respond(ptab) {
+            width:75%; 
+        }
+        @include respond(phone) {
+            width:100%; 
+        }
     }
+    @include respond(ptab) {
+        background-image: linear-gradient(95deg, rgba($white, .8) 0%, rgba($white, .8) 75%, transparent 50%), url(../img/landscape-tours.jpg); 
+    }
+    @include respond(phone) {
+        background-image: linear-gradient(95deg, rgba($white, .8) 0%, rgba($white, .8) 100%), url(../img/landscape-tours.jpg); 
+    }
+
 }

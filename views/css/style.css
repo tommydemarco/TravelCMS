@@ -140,6 +140,18 @@ body {
   .book__form {
     width: 50%;
     padding: 5rem; }
+    @media (max-width: 56.25em) {
+      .book__form {
+        width: 75%; } }
+    @media (max-width: 37.5em) {
+      .book__form {
+        width: 100%; } }
+  @media (max-width: 56.25em) {
+    .book {
+      background-image: linear-gradient(95deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 75%, transparent 50%), url(../img/landscape-tours.jpg); } }
+  @media (max-width: 37.5em) {
+    .book {
+      background-image: linear-gradient(95deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%), url(../img/landscape-tours.jpg); } }
 
 .section-about-us {
   background-color: #eeeded;
@@ -321,6 +333,7 @@ body {
     height: 15rem;
     background-color: white;
     float: left;
+    overflow: hidden;
     -webkit-shape-outside: circle(52% at 50% 50%);
     shape-outside: circle(52% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%);
@@ -329,7 +342,7 @@ body {
     position: relative; }
     @media (max-width: 37.5em) {
       .story__shape {
-        transform: translateX(-3rem) skewX(-2deg);
+        transform: translateX(0) skewX(-2deg);
         float: none;
         margin: 0 auto 2rem auto; } }
   .story__image {
@@ -340,7 +353,7 @@ body {
     transform: skewX(12deg); }
     @media (max-width: 37.5em) {
       .story__text {
-        transform: skewX(-2deg); } }
+        transform: skewX(-1.7fdeg); } }
   .story__caption {
     position: absolute;
     top: 50%;
@@ -351,6 +364,7 @@ body {
     text-align: center;
     opacity: 0;
     transition: all .4s;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden; }
   .story:hover .story__caption {
     transform: translate(-50%, -50%);
@@ -372,6 +386,7 @@ body {
     left: 0;
     width: 100%;
     overflow: hidden;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 3px;
     box-shadow: 0 2rem 4rem rgba(44, 62, 80, 0.3); }
@@ -609,8 +624,8 @@ body {
   background-image: linear-gradient(to right bottom, rgba(183, 124, 206, 0.7), rgba(142, 68, 173, 0.76)), url(../img/bg.jpg);
   background-size: cover;
   background-position: top;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
   position: relative; }
   @media (max-width: 56.25em) {
     .header {
@@ -626,6 +641,7 @@ body {
 .main-heading {
   color: white;
   text-transform: uppercase;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   margin-bottom: 50px; }
   .main-heading--main {
@@ -651,8 +667,8 @@ body {
 .row {
   max-width: 114rem;
   margin: 0 auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem; }
+  padding-left: 2.5rem;
+  padding-right: 2.5rem; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
     @media (max-width: 56.25em) {
