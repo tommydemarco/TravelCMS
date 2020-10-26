@@ -1,8 +1,20 @@
 .row {
     max-width: $grid-width;
     margin:0 auto;
+    padding-left:1.5rem;
+    padding-right:1.5rem;
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
+        @include respond(ptab) {
+            margin-bottom: $gutter-vertical-sm;
+        }
+    }
+
+    @include respond(ptab) {
+        max-width: $grid-width-md;
+    }
+    @include respond(phone) {
+        max-width: $grid-width-sm;
     }
 
     @include clearfix;
@@ -11,6 +23,14 @@
         float:left;
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
+            @include respond(ptab) {
+                margin-right: 0;
+                margin-bottom: $gutter-vertical-sm;
+            }
+        }
+        
+        @include respond(ptab) {
+            width:100% !important;
         }
     }
 

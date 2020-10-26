@@ -5,7 +5,7 @@
             <span class="main-heading--main">Travelling</span>
             <span class="main-heading--sub">The way you imagine</span>
         </h1>
-        <a href="#" class="btn btn--white btn--animated">View our tours</a>
+        <a href="#tours" class="btn btn--white btn--animated">View our tours</a>
     </div>
 </header>
 
@@ -71,7 +71,7 @@
         </div>
     </section>
 
-    <section class="section-tours">
+    <section id="tours" class="section-tours">
         <div class="u-center-text u-mb-big">
             <h2 class="heading-secondary">
                 Exciting Tour for Adventorous people

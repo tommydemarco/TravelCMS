@@ -15,6 +15,15 @@
         cursor: pointer;
         box-shadow: $shadow;
 
+        @include respond(ptab) {
+            top: 2.5rem;
+            right:2.5rem;
+        }
+        @include respond(phone) {
+            top: 1.5rem;
+            right:1.5rem;
+        }
+
     }   
     &__background {
        height: 5rem;
@@ -26,6 +35,15 @@
        background-image: radial-gradient($light-purple, $dark-purple);
        z-index: 1000;
        transition: all 1s ease-out;
+
+       @include respond(ptab) {
+        top: 3rem;
+        right:3rem;
+        }
+        @include respond(phone) {
+            top: 2rem;
+            right:2rem;
+        }
        
     }
     &__nav {

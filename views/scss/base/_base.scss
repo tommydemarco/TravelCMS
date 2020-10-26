@@ -7,11 +7,26 @@
 }
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
+
+    @include respond(ltab) {
+        font-size:55.25%;
+    }
+    @include respond(ptab) {
+        font-size:55.25%;
+    }
+    @include respond(bdesk) {
+        font-size:75%;
+    }
 }
 body {
     font-size: 1.6rem;
     font-weight:400px;
     color: $dark-grey;
-    padding: 30px;
+    padding: 3rem;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    @include respond(ptab) {
+        padding:0;
+    }  
+
 }

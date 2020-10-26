@@ -4,6 +4,9 @@
     &__logo-box {
         width:fit-content;   
         margin: 0 auto;
+        @include respond(ptab) {
+            margin-bottom: 6rem!important;
+        }
     }   
     &__logo {
         font-size:10rem!important;
@@ -15,6 +18,9 @@
         border-top: 1px solid $light-grey;
         width:fit-content;
         padding-top: 1rem;
+        @include respond(ptab) {
+            margin: 0 auto;
+        }
     }
     &__list {
         list-style: none;
@@ -46,5 +52,10 @@
         float:right;
         border-top: 1px solid $light-grey;
         padding-top: 1rem;
+
+        @include respond(ptab) {
+            margin: 0 auto;
+            float:none;
+        }
     }
 }

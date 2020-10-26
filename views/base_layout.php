@@ -1,7 +1,5 @@
 <?php
-
 $generic = GenericInfoController::ctlShowGenericInfo();
-
 ?>
 
 <!DOCTYPE html>

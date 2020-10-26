@@ -7,10 +7,10 @@
         <div class="col-1-of-2">
             <nav class="footer__navigation">
                 <ul class="footer__list">
-                    <li class="footer__item"><a href="#" class="footer__link">Contacts</a></li>
-                    <li class="footer__item"><a href="#" class="footer__link">Contacts</a></li>
-                    <li class="footer__item"><a href="#" class="footer__link">Contacts</a></li>
-                    <li class="footer__item"><a href="#" class="footer__link">Contacts</a></li>
+                    <li class="footer__item"><a href="./home" class="footer__link">Home</a></li>
+                    <li class="footer__item"><a href="./about" class="footer__link">About us</a></li>
+                    <li class="footer__item"><a href="./testimonials" class="footer__link">Testimonials</a></li>
+                    <li class="footer__item"><a href="./contacts" class="footer__link">Contacts</a></li>
                 </ul>
             </nav>
         </div>
