@@ -6,9 +6,9 @@ class Connection {
     
     static public function connect() {
 
-        $username = UserDev::$username;
-        $password = UserDev::$password;
-        $dbname = UserDev::$dbname;
+        $username = User::$username;
+        $password = User::$password;
+        $dbname = User::$dbname;
 
         $connection_link = new PDO("mysql:host=localhost;dbname=$dbname", "$username", "$password");
 
