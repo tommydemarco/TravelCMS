@@ -9,15 +9,15 @@
 //MEDIA QUERY MANAGER 
 @mixin respond($breakpoint) {
     @if $breakpoint == phone {
-        @media (max-width: 37.5em) { @content };
+        @media only screen and (max-width: 37.5em) { @content };
     }
     @if $breakpoint == ptab {
-        @media (max-width: 56.25em) { @content };
+        @media only screen and (max-width: 56.25em) { @content };
     }
     @if $breakpoint == ltab {
-        @media (max-width: 75em) { @content };
+        @media only screen and (max-width: 75em) { @content };
     }
     @if $breakpoint == bdesk {
-        @media (min-width: 112.5em) { @content };
+        @media only screen and (min-width: 112.5em) { @content };
     }
 }

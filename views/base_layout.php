@@ -1,5 +1,11 @@
 <?php
 $generic = GenericInfoController::ctlShowGenericInfo();
+$availableRoutes = ['home' => 'index', 'about' => 'about', 'contacts' => 'contacts',
+                    'testimonials' => 'testimonials', 'cookies-policy' => 'cookies',
+                    'privacy-policy' => 'privacy'];
+if(isset($_GET['page'])) {
+    $url_request = $_GET["page"];
+}
 ?>
 
 <!DOCTYPE html>
@@ -8,16 +14,6 @@ $generic = GenericInfoController::ctlShowGenericInfo();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="<?php echo $generic["description"] ?>">
-    <?php 
-        // $keywords = json_decode($generic["keywords"], true);
-        // $k_w = '';
-        // foreach($keywords as $keyword) {
-        //     $k_w .= "$keyword, ";
-        // }
-        // $k_w = substr($k_w, 0, -2)
-    ?>
-    <meta name="keywords" content="<?php echo "Keywords here" ?>">
-
 
     <!-- FAVICONS -->
     <link rel="apple-touch-icon" sizes="144x144" href="./views/favicons/apple-touch-icon.png">
@@ -30,18 +26,35 @@ $generic = GenericInfoController::ctlShowGenericInfo();
 
     <link rel="stylesheet" href="views/css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title><?php echo $generic["title"] ?></title>
+    <title>
+    <?php 
+        if(isset($_GET['page']) && isset($availableRoutes[$url_request])) {
+            echo $generic["title"] . " | " . ucfirst($_GET['page']);
+        } else {
+            echo $generic["title"];
+        }
+    ?>
+    </title>
+
+    <!-- Cookie Consent by https://www.FreePrivacyPolicy.com -->
+    <script type="text/javascript" src="//www.freeprivacypolicy.com/public/cookie-consent/3.1.0/cookie-consent.js"></script>
+    <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+    cookieconsent.run({"notice_banner_type":"interstitial","consent_type":"express","palette":"dark","language":"en","cookies_policy_url":"https://kbtravel.tommasodemarco.com/cookies-policy"});
+    });
+    </script>
+
+    <noscript>Cookie Consent by <a href="https://www.FreePrivacyPolicy.com/free-cookie-consent/" rel="nofollow noopener">FreePrivacyPolicy.com</a></noscript>
+    <!-- End Cookie Consent -->
+    
 </head>
 <body>
 
     <?php include_once 'elements/navigation.php' ?>
 
-    <?php 
-
-    $availableRoutes = ['home' => 'index', 'about' => 'about', 'contacts' => 'contacts', 'testimonials' => 'testimonials'];
+    <?php
 
     if(isset($_GET["page"])){
-        $url_request = $_GET["page"];
         if(isset($availableRoutes[$url_request])) {
             include "pages/" . $availableRoutes[$url_request] . ".php";
         } else {

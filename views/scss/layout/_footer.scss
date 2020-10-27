@@ -1,6 +1,6 @@
 .footer {
     background-color: $black;
-    padding: 10rem 0;
+    padding: 10rem 0 5rem 0;
     &__logo-box {
         width:fit-content;   
         margin: 0 auto;
@@ -9,7 +9,7 @@
         }
     }   
     &__logo {
-        font-size:10rem!important;
+        font-size:11rem!important;
         background-image: linear-gradient(to right, $light-purple, $dark-purple);
         -webkit-background-clip: text;
         color:transparent;  
@@ -56,6 +56,13 @@
         @include respond(ptab) {
             margin: 0 auto;
             float:none;
+        }
+    }
+    &__legal {
+        margin: 0 auto;
+        width:fit-content;
+        &--custom {
+            font-size:1.4rem;
         }
     }
 }

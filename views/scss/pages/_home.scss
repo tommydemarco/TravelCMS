@@ -52,6 +52,16 @@
         rgba($dark-purple, 0.76)), 
         url(../img/bg.jpg);   
 }
+.section-not-found {
+    padding: 10rem 0 15rem;
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba($light-purple, 0.7), 
+        rgba($dark-purple, 0.76)), 
+        url(../img/bg.jpg);
+    position: relative; 
+    height: 80vh;    
+}
 
 .book {
     background-image: linear-gradient(100deg, rgba($white, .8) 0%, rgba($white, .8) 50%, transparent 50%), url(../img/landscape-tours.jpg);

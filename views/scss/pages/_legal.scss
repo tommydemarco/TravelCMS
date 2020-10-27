@@ -1,0 +1,11 @@
+.section-legal {
+    background-color: $light-grey;
+    padding:10rem 0 10rem;   
+}
+.policy-text {
+    max-width: 70%;
+    padding-left: 4rem;
+    @include respond(phone) {
+        max-width:90%;
+    }
+}

@@ -16,9 +16,16 @@
         </div>
         <div class="col-1-of-2">
             <p class="footer__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, cumque quia temporibus, beatae nulla, quam rem repellat porro et animi reiciendis! Eaque maiores quibusdam esse autem, praesentium quis doloremque nobis.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, cumque quia temporibus, beatae nulla.
             </p>
         </div>
+    </div>
+    <div class="footer__legal">
+        <ul class="footer__list footer__legal--custom">
+            <li class="footer__item"><a href="./cookies-policy" class="footer__link">COOKIES POLICY</a></li>
+            <li class="footer__item"><a href="./privacy-policy" class="footer__link">PRIVACY POLICY</a></li>
+            <li class="footer__item"><a href="https://tommasodemarco.com" class="footer__link">CONTACT DEVELOPER</a></li>
+        </ul>
     </div>
 
 </footer>

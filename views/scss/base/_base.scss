@@ -28,5 +28,8 @@ body {
     @include respond(ptab) {
         padding:0;
     }  
-
+}
+::selection {
+    background-color: $dark-purple;
+    color:white;
 }

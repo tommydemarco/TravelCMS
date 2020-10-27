@@ -1,5 +1,4 @@
 <header class="header">
-    
     <div class="header__text-box">
         <h1 class="main-heading">
             <span class="main-heading--main">Travelling</span>

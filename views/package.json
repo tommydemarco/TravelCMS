@@ -4,11 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass scss/main.scss css/style.css -w"
+    "watch:sass": "node-sass scss/main.scss css/style.css -w",
+    "compress:sass": "node-sass css/style.css css/style.css --output-style compressed"
+
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^4.14.1"
+  },
+  "dependencies": {
+    "concat": "^1.0.3"
   }
 }
