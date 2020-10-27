@@ -6,5 +6,3 @@ class BaseLayoutController {
         include 'views/base_layout.php';
     }
 }
-
-?>

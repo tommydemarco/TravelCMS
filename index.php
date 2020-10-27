@@ -9,5 +9,3 @@ require_once 'models/generic_info.model.php';
 //importing the base layout
 $base_layout = new BaseLayoutController();
 $base_layout -> ctlImportBaseLayout();
-
-?>

@@ -14,5 +14,3 @@ class AboutController {
         return $response;
     }
 }
-
-?>
